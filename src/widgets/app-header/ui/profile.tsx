@@ -14,11 +14,12 @@ import {
 import { Button } from "@/shared/ui/button";
 import { Avatar, AvatarFallback } from "@/shared/ui/avatar";
 import Link from "next/link";
+import { LogOut, User } from "lucide-react";
 
 const cnProfile = cn("Profile");
 
-export const cnProfile: FC = () => {
-  const onLogout = () => signOut.signOut();
+export const Profile: FC = () => {
+  const onLogout = () => console.log("logOut");
 
   return (
     <DropdownMenu>
@@ -32,7 +33,7 @@ export const cnProfile: FC = () => {
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 mr-2">
+      <DropdownMenuContent className={cnProfile(null, ["w-56 mr-2"])}>
         <DropdownMenuLabel>
           <p>Мой аккаунт</p>
           <p className="text-xs text-muted-foreground overflow-hidden text-ellipsis">
@@ -43,13 +44,13 @@ export const cnProfile: FC = () => {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem asChild>
-            <Link href={`/profile/${session.data?.user.id}`}>
+            <Link href={`/profile/1`}>
               <User className="mr-2 h-4 w-4" />
               <span>Профиль</span>
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={onLogout}>
-            <Logout className="mr-2 h-4 w-4" />
+            <LogOut className="mr-2 h-4 w-4" />
             <span>Выход</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>

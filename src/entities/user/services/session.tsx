@@ -4,6 +4,7 @@ import { SessionEntity, UserEntity, userToSession } from "../domain";
 import { left, right } from "@/shared/lib/either";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { SessionProvider, useSession } from "next-auth/react";
 
 const secretKey = process.env.SESSION_SECRET;
 const encodedKey = new TextEncoder().encode(secretKey);

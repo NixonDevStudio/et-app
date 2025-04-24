@@ -5,23 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe98e53a-9fb0-43fe-9f78-ddecf1cc5a9c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/post/domain.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/post/repositories/post.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/post/repositories/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/post/services/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/lib/css.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/lib/db.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/sign-in/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/sign-up/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/domain.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/repositories/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/services/create-user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/services/get-current-user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/services/password.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/services/session.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/user/services/verify-user-password.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/actions/sign-in.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/actions/sign-up.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/containers/sign-in-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/containers/sign-up-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/lib/typeguards.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/auth-fields.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/auth-form-layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/bottom-link.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/fields.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/ilnk.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/submit-button copy.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/submit-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kernel/ids.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kernel/routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/lib/either.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/lib/reacts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/ui/logo-icon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/app-header/_ui/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/app-header/_ui/logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/app-header/_ui/main-nav.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/app-header/_ui/profile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/app-header/app-header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/seed.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/post/domain.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/post/domain.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +76,9 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/projects/my-projects/et-app&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -61,7 +88,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\projects\\my-projects\\et-app\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\projects\\my-projects\\et-app\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -72,10 +99,25 @@
       <recent name="C:\projects\my-projects\et-app\src" />
     </key>
   </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
       </set>
     </attachedChunks>
   </component>
@@ -92,7 +134,27 @@
       <workItem from="1743017975618" duration="32000" />
       <workItem from="1743093564438" duration="16000" />
       <workItem from="1743864508530" duration="7861000" />
-      <workItem from="1743876929473" duration="35000" />
+      <workItem from="1743876929473" duration="364000" />
+      <workItem from="1743950348617" duration="475000" />
+      <workItem from="1744046812732" duration="2094000" />
+      <workItem from="1744131557186" duration="5087000" />
+      <workItem from="1744219189091" duration="219000" />
+      <workItem from="1744219486717" duration="3245000" />
+      <workItem from="1744305104909" duration="2906000" />
+      <workItem from="1744436683906" duration="4502000" />
+      <workItem from="1744475531824" duration="17000" />
+      <workItem from="1744480893618" duration="2260000" />
+      <workItem from="1744651632051" duration="4016000" />
+      <workItem from="1744736450230" duration="155000" />
+      <workItem from="1744736614260" duration="3724000" />
+      <workItem from="1744821492678" duration="972000" />
+      <workItem from="1744910673353" duration="103000" />
+      <workItem from="1744910850217" duration="247000" />
+      <workItem from="1744911110310" duration="944000" />
+      <workItem from="1745073610086" duration="6347000" />
+      <workItem from="1745259344844" duration="1281000" />
+      <workItem from="1745430501309" duration="1971000" />
+      <workItem from="1745474680648" duration="3850000" />
     </task>
     <servers />
   </component>

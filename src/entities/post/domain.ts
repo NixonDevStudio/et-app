@@ -5,7 +5,6 @@
 export type UserEntity = {
   id: string;
   login: string;
-  role: string;
 };
 
 export type Field = Cell;

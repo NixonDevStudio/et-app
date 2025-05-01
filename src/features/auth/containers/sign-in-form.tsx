@@ -8,7 +8,7 @@ import { ErrorMessage } from '../ui/submit-button copy';
 
 import { routes } from '@/kernel/routes';
 import { BottomLink } from '@/features/auth/ui/ilnk';
-import { useActionState } from '@/shared/lib/reacts';
+import { useActionState } from '@/shared/lib/react';
 import { signInAction, SignInFormState } from '@/features/auth/actions/sign-in';
 
 export function SignInForm() {

@@ -1,6 +1,5 @@
 import { left, right } from '@/shared/lib/either';
 import { userRepository } from '../repositories/user';
-import cuid from 'cuid';
 import { passwordService } from './password';
 
 export const createUser = async ({
@@ -19,7 +18,7 @@ export const createUser = async ({
   const { hash, salt } = await passwordService.hashPassword(password);
 
   const user = await userRepository.saveUser({
-    id: cuid(),
+    id: Math.round(Math.random() * 1000),
     login,
     passwordHash: hash,
     salt

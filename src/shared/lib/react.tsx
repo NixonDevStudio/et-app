@@ -1,17 +1,15 @@
 import {
+  Children,
   Context,
   createContext,
-  useContext,
-  startTransition,
-  useEffect,
-  useState,
-  ReactNode,
-  Children,
-  isValidElement,
   createElement,
-  useMemo,
-  useRef,
-  useActionState as useActionStateReact
+  isValidElement,
+  ReactNode,
+  startTransition,
+  useActionState as useActionStateReact,
+  useContext,
+  useEffect,
+  useState
 } from 'react';
 
 export function useStrictContext<T>(context: Context<T | null>) {
@@ -70,23 +68,6 @@ export function ComposeChildren({ children }: { children: ReactNode }) {
         last
       )}
     </>
-  );
-}
-
-type Fn<ARGS extends any[], R> = (...args: ARGS) => R;
-
-export function useEventCallback<A extends any[], R>(fn: Fn<A, R>): Fn<A, R> {
-  const ref = useRef<Fn<A, R>>(fn);
-  useEffect(() => {
-    ref.current = fn;
-  });
-  return useMemo(
-    () =>
-      (...args: A): R => {
-        const { current } = ref;
-        return current(...args);
-      },
-    []
   );
 }
 

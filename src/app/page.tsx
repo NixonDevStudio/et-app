@@ -6,6 +6,7 @@ import { AppHeader } from '@/widgets/app-header/app-header';
 
 const Home: FC = async () => (
   <>
+    <h1>Page Title</h1>
     <AppHeader variant='public' />
     <HomeView />
   </>

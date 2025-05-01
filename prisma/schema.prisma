@@ -14,31 +14,32 @@ datasource db {
 }
 
 model User {
-  id           String @id @default(cuid())
+  id           Int    @id @default(autoincrement())
   login        String @unique
-  passwordHash String
+  passwordHash String @map("password_hash")
   salt         String
   posts        Post[]
-}
 
-enum UserRole {
-  SuperAdmin
-  Admin
-  Contributor
-  Simple
+  @@map("user")
 }
 
 model Post {
-  id          String     @id @default(cuid())
-  title       String
-  content     String
-  status      PostStatus
-  user        User       @relation(fields: [post_author], references: [id])
-  post_author String
+  id           Int    @id @default(autoincrement())
+  title        String
+  content      String
+  user         User   @relation(fields: [postAuthorId], references: [id])
+  postAuthorId Int    @map("post_author_id")
 }
 
-enum PostStatus {
-  New
-  Archive
-  Published
+model LegacyPosts {
+  id           Int     @id @default(autoincrement())
+  postAuthorId Int     @map("post_author_id")
+  postDate     String  @map("post_date")
+  guid         String
+  postContent  String? @map("post_content")
+  postTitle    String? @map("post_title")
+  postStatus   String? @map("post_status") @db.VarChar(80)
+  postName     String? @map("post_name")
+  postModified String? @map("post_modified")
+  postParent   Int?    @map("post_parent")
 }

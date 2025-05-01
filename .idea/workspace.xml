@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe98e53a-9fb0-43fe-9f78-ddecf1cc5a9c" name="Changes" comment="" />
+    <list default="true" id="fe98e53a-9fb0-43fe-9f78-ddecf1cc5a9c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/check-pr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/on-check.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,6 +153,7 @@
       <workItem from="1745947981035" duration="465000" />
       <workItem from="1745948474164" duration="3564000" />
       <workItem from="1746032644199" duration="16970000" />
+      <workItem from="1746118306623" duration="4441000" />
     </task>
     <servers />
   </component>

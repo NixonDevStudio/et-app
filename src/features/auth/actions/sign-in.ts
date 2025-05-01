@@ -1,10 +1,10 @@
-"use server";
+'use server';
 
-import { sessionService, verifyUserPassword } from "@/entities/user/server";
+import { sessionService, verifyUserPassword } from '@/entities/user/server';
 
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation';
 
-import { z } from "zod";
+import { z } from 'zod';
 
 export type SignInFormState = {
   formData?: FormData;
@@ -17,12 +17,12 @@ export type SignInFormState = {
 
 const formDataSchema = z.object({
   login: z.string().min(3),
-  password: z.string().min(3),
+  password: z.string().min(3)
 });
 
 export const signInAction = async (
   state: SignInFormState,
-  formData: FormData,
+  formData: FormData
 ): Promise<SignInFormState> => {
   const data = Object.fromEntries(formData.entries());
   const result = formDataSchema.safeParse(data);
@@ -32,25 +32,25 @@ export const signInAction = async (
     return {
       formData,
       errors: {
-        login: formatedErrors.login?._errors.join(", "),
-        password: formatedErrors.password?._errors.join(", "),
-        _errors: formatedErrors._errors.join(", "),
-      },
+        login: formatedErrors.login?._errors.join(', '),
+        password: formatedErrors.password?._errors.join(', '),
+        _errors: formatedErrors._errors.join(', ')
+      }
     };
   }
 
   const verifyUserResult = await verifyUserPassword(result.data);
 
-  if (verifyUserResult.type === "right") {
+  if (verifyUserResult.type === 'right') {
     await sessionService.addSession(verifyUserResult.value);
 
-    redirect("/");
+    redirect('/');
   }
 
   return {
     formData,
     errors: {
-      _errors: "Неверный логин или пароль",
-    },
+      _errors: 'Неверный логин или пароль'
+    }
   };
 };

@@ -14,19 +14,19 @@ export type PostSymbol = string;
 export type PostArchiveEntity = {
   id: string;
   author: UserEntity;
-  status: "archive";
+  status: 'archive';
 };
 
 export type PostPublishedEntity = {
   id: string;
   author: UserEntity;
-  status: "published";
+  status: 'published';
 };
 
 export type PostNewEntity = {
   id: string;
   author: UserEntity;
-  status: "new";
+  status: 'new';
 };
 
 export type PostEntity =

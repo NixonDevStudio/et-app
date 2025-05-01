@@ -1,9 +1,9 @@
-"use server";
+'use server';
 
-import { createUser, sessionService } from "@/entities/user/server";
-import { redirect } from "next/navigation";
+import { createUser, sessionService } from '@/entities/user/server';
+import { redirect } from 'next/navigation';
 
-import { z } from "zod";
+import { z } from 'zod';
 
 export type SignUnFormState = {
   formData?: FormData;
@@ -16,12 +16,12 @@ export type SignUnFormState = {
 
 const formDataSchema = z.object({
   login: z.string().min(3),
-  password: z.string().min(3),
+  password: z.string().min(3)
 });
 
 export const signUpAction = async (
   state: SignUnFormState,
-  formData: FormData,
+  formData: FormData
 ): Promise<SignUnFormState> => {
   const data = Object.fromEntries(formData.entries());
   const result = formDataSchema.safeParse(data);
@@ -31,29 +31,29 @@ export const signUpAction = async (
     return {
       formData,
       errors: {
-        login: formatedErrors.login?._errors.join(", "),
-        password: formatedErrors.password?._errors.join(", "),
-        _errors: formatedErrors._errors.join(", "),
-      },
+        login: formatedErrors.login?._errors.join(', '),
+        password: formatedErrors.password?._errors.join(', '),
+        _errors: formatedErrors._errors.join(', ')
+      }
     };
   }
 
   const createUserResult = await createUser(result.data);
 
-  if (createUserResult.type === "right") {
+  if (createUserResult.type === 'right') {
     await sessionService.addSession(createUserResult.value);
 
-    redirect("/");
+    redirect('/');
   }
 
   const errors = {
-    "user-login-exists": "Пользователь с таким login существует",
+    'user-login-exists': 'Пользователь с таким login существует'
   }[createUserResult.error];
 
   return {
     formData,
     errors: {
-      _errors: errors,
-    },
+      _errors: errors
+    }
   };
 };

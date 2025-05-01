@@ -1,7 +1,7 @@
-"use server";
+'use server';
 
-import { FC } from "react";
-import { SignUpForm } from "@/features/auth";
+import { FC } from 'react';
+import { SignUpForm } from '@/features/auth';
 
 const SignUpPage: FC = () => <SignUpForm />;
 

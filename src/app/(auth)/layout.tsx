@@ -1,11 +1,15 @@
-"use client";
+'use server';
 
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from 'react';
+import { AppHeader } from '@/widgets/app-header/app-header';
 
-const AuthLayout: FC<PropsWithChildren> = ({ children }) => (
-  <div className="w-full mt-52 flex items-center justify-center">
-    {children}
-  </div>
+const AuthLayout: FC<PropsWithChildren> = async ({ children }) => (
+  <>
+    <AppHeader variant='auth' />
+    <div className='w-full mt-52 flex items-center justify-center'>
+      {children}
+    </div>
+  </>
 );
 
 export default AuthLayout;

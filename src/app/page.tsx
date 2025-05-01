@@ -1,8 +1,14 @@
-"use server";
+'use server';
 
-import { FC } from "react";
-import { HomeView } from "@/views/home";
+import { FC } from 'react';
+import { HomeView } from '@/views/home';
+import { AppHeader } from '@/widgets/app-header/app-header';
 
-const Home: FC = async () => <HomeView />;
+const Home: FC = async () => (
+  <>
+    <AppHeader variant='public' />
+    <HomeView />
+  </>
+);
 
 export default Home;

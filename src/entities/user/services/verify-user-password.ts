@@ -1,10 +1,10 @@
-import { left, right } from "@/shared/lib/either";
-import { userRepository } from "../repositories/user";
-import { passwordService } from "./password";
+import { left, right } from '@/shared/lib/either';
+import { userRepository } from '../repositories/user';
+import { passwordService } from './password';
 
 export async function verifyUserPassword({
   login,
-  password,
+  password
 }: {
   login: string;
   password: string;
@@ -12,17 +12,17 @@ export async function verifyUserPassword({
   const user = await userRepository.getUser({ login });
 
   if (!user) {
-    return left("Неверный логин или пароль" as const);
+    return left('Неверный логин или пароль' as const);
   }
 
   const isCompare = await passwordService.comparePasswords({
     hash: user.passwordHash,
     salt: user.salt,
-    password,
+    password
   });
 
   if (!isCompare) {
-    return left("Неверный логин или пароль" as const);
+    return left('Неверный логин или пароль' as const);
   }
 
   return right(user);

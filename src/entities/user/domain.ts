@@ -1,4 +1,4 @@
-import { UserId } from "@/kernel/ids";
+import { UserId } from '@/kernel/ids';
 
 export type UserEntity = {
   id: UserId;
@@ -15,11 +15,11 @@ export type SessionEntity = {
 
 export const userToSession = (
   user: UserEntity,
-  expiredAt: string,
+  expiredAt: string
 ): SessionEntity => {
   return {
     id: user.id,
     login: user.login,
-    expiredAt,
+    expiredAt
   };
 };

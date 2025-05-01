@@ -1,4 +1,4 @@
-type LegacyPostsListElement = {
+export type LegacyPostsListElement = {
   id: number;
   postAuthorId: number;
   postDate: string;
@@ -11,7 +11,7 @@ type LegacyPostsListElement = {
   postParent: number | null;
 };
 
-type CreateLegacyPostListElementCommand = {
+export type CreateLegacyPostListElementCommand = {
   postAuthorId: number;
   postDate: string;
   guid: string;
@@ -21,6 +21,6 @@ type CreateLegacyPostListElementCommand = {
   postContent: string;
 };
 
-type DeleteLegacyPostListElementCommand = {
+export type DeleteLegacyPostListElementCommand = {
   id: number;
 };

@@ -9,7 +9,7 @@ import { ErrorMessage } from '../ui/submit-button copy';
 import { SignUnFormState, signUpAction } from '../actions/sign-up';
 import { routes } from '@/kernel/routes';
 import { BottomLink } from '@/features/auth/ui/ilnk';
-import { useActionState } from '@/shared/lib/reacts';
+import { useActionState } from '@/shared/lib/react';
 
 export function SignUpForm() {
   const [formState, action, isPending] = useActionState(
